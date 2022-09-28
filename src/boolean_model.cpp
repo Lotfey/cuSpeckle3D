@@ -1,7 +1,5 @@
 #include "boolean_model.h"
 
-
-
 void generate_random_radius(float output[], float *kappa, float *theta,
                             paramSpeckle<float> myParamSpeckle,
                             vec3D<int> dims, 
@@ -67,8 +65,6 @@ void generate_random_radius(float output[], float *kappa, float *theta,
     }
 }
 
-
-
 /*
 Normal inverse cumulative distribution function (see Algorithm in https://fr.mathworks.com/help/stats/norminv.html#mw_06d38ca9-8aa3-44b8-bb8e-549e1c9b4fde)
 Using Inverse ERandom_radiusor Function (erfc_inv) from the Boost library ( for details check https://www.boost.org/doc/libs/1_68_0/libs/math/doc/html/math_toolkit/sf_erf/eRandom_radiusor_inv.html)
@@ -127,8 +123,7 @@ void boolean_model(float *Random_centers,
          (int)floor((float)((float)1 / pi / 2 * gamma * gamma * pow(2, (2 * nbit)) / (alpha * alpha))));
 
     // estimate delta
-
-    //float delta =0; // delta equal zero for reference image// no displacement involved 
+    // delta equal zero for reference image// no displacement involved 
     float delta = estimate_delta(dims);
     printf("Estimated delta from Boolean model: %E\n", delta);
 
