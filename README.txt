@@ -9,18 +9,24 @@ Installation steps:
 		○ sudo apt-get install libboost-all-dev
 		○ sudo apt-get install libtiff-dev
 		○ sudo apt-get install libpng-dev
+		○ clone samples folder to this directory: usr/local/cuda "$ sudo git clone https://github.com/Lotfey/samples.git"
 
 Declaration of mapping function (deformation):
-	replace the code inside "func" in file "speckle_generator_main.cpp" line 27 and inside "Disp" "operator" in file "MC_estimation_cuda.cu" line 32 
-	with the same code to define the deesired mapping function to use (refere to the given examples)
+	+ To generate reference image/volume use the identity function inside inside mapping fuction(check examples/example_id.txt)	
+	save your files and rebuild your project then run command to gennerate your reference image/volume
+	
+	+ To gernerate deformed image/volume, you should define your deformation field then past your code 
+	inside mapping function. In this project I used star deformation field function (check examples/example_star.txt)
+	save your files and rebuild your project then run command to gennerate your deformed image/volume
+	
 
 Compilation & build:
-	Run "make" command (optional name) ==> make TARGET="cuda_program"
-	Verify that the compilation is successful and you can run "./cuSpeckle" on the terminal that returns the help of the program
+	Run "make" command
+	Verify that the compilation is successful and you can run "./cuSpeckle3D" on the terminal that returns the help of the program
 	
 Run Simple command: 
 	./cuSpeckle3D img_out.png -width 100 -height 100 -depth 1
     or
-    ./cuSpeckle3D vol_out -width 100 -height 100 -depth 100
+    	./cuSpeckle3D vol_out -width 100 -height 100 -depth 100
 	
 Check the output image/ volume
