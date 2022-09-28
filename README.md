@@ -20,4 +20,4 @@ the tree plans X-Y, X-Z and Y-Z plans
 
 [1] F. Sur, B. Blaysat, and M. Grediac, \Rendering deformed speckle images with
     a boolean model," Journal of Mathematical Imaging and Vision, vol. 60, no. 5,
-    pp. 634{650, 2018.
+    pp. 634-650, 2018.
