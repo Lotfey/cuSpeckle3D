@@ -124,8 +124,8 @@ int main(int argc, char *argv[])
     }
     else
         lambda = round(5 / 9.0 * width * height*depth); //500000;
-        //lambda = round( 0.3f * width * height* depth); //500000;
-        //lambda = round( 0.1f * width * height* depth); //500000;
+        //lambda = round( 0.3f * width * height* depth);
+        //lambda = round( 0.1f * width * height* depth);
 
     if (cmdOptionExists(argv, argv + argc, "-sigmaR"))
     {
