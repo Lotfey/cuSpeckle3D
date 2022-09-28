@@ -249,7 +249,7 @@ void process_mem_usage(double& vm_usage, double& resident_set)
    resident_set = 0.0;
 
    // 'file' stat seems to give the most reliable results
-   //
+   
    ifstream stat_stream("/proc/self/stat",ios_base::in);
 
    // dummy vars for leading entries in stat that we don't care about
@@ -260,7 +260,7 @@ void process_mem_usage(double& vm_usage, double& resident_set)
    string O, itrealvalue, starttime;
 
    // the two fields we want
-   //
+  
    unsigned long vsize;
    long rss;
 
