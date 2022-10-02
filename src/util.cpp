@@ -1,7 +1,7 @@
 #include "io_png.h"
 #include "util.h"
 
-/// help on usage of inpainting code
+// help on usage of inpainting code
 void show_help()
 {
     std::cerr << "\nSpeckle Generator.\n"
@@ -252,15 +252,13 @@ void process_mem_usage(double& vm_usage, double& resident_set)
    
    ifstream stat_stream("/proc/self/stat",ios_base::in);
 
-   // dummy vars for leading entries in stat that we don't care about
-   //
+   // Dummy vars for leading entries in stat that we don't care about
    string pid, comm, state, ppid, pgrp, session, tty_nr;
    string tpgid, flags, minflt, cminflt, majflt, cmajflt;
    string utime, stime, cutime, cstime, priority, nice;
    string O, itrealvalue, starttime;
 
-   // the two fields we want
-  
+   // The two fields we want  
    unsigned long vsize;
    long rss;
 
