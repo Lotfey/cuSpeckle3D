@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
     /**************************************************/
 
     //algorithm params
+    //
     if (cmdOptionExists(argv, argv + argc, "-alpha"))
     {
         alpha = (float)atof(getCmdOption(argv, argv + argc, "-alpha"));
